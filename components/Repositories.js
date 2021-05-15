@@ -63,7 +63,7 @@ const ProjectItem = ({ name, desc, star_count, href, language }) => {
 const Repositories = () => {
     const [searchValue, setSearchValue] = useState('');
     const { data, error } = useSWR('/api/projects', fetcher)
-    if (error) return <div style={{ width: '100%' }}>Failed to load projects.</div>
+    if (error) return <div style={{ width: '100%', textAlign: "center", color: "#fff" }}>Failed to load projects.</div>
 
     {/* Search */ }
     if (!data) return (
@@ -107,7 +107,7 @@ const Repositories = () => {
                 />
                 <InputRightElement children={<SearchIcon color="#718096" mt={10} mr={10} />} />
             </InputGroup>
-            <SimpleGrid columns={1} spacing="20px">
+            <SimpleGrid columns={1} spacing="20px" color="#fff">
                 {!filteredProjects.length && 'No projects found.'}
                 {filteredProjects
                     .map((p) => (

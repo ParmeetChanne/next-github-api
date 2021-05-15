@@ -10,7 +10,7 @@ import Repositories from '../components/Repositories'
 const Github = () => {
 
     return (
-        <div style={{ backgroundColor: '#03030F' }}>
+        <div>
             <Stack
                 as="main"
                 spacing={8}
