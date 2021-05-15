@@ -68,7 +68,7 @@ const Repositories = () => {
     {/* Search */ }
     if (!data) return (
         <div style={{ width: '100%' }}>
-            <InputGroup mb={4} mr={4} w="100%">
+            <InputGroup mb={4} mr={4} w="100%" rounded="0.5rem">
                 <Input
                     aria-label="Search Repositories"
                     placeholder="Search Repositories"
@@ -103,6 +103,7 @@ const Repositories = () => {
                     onChange={(e) => setSearchValue(e.target.value)}
                     w="100%"
                     p="10px"
+                    rounded="0.4rem"
                 />
                 <InputRightElement children={<SearchIcon color="#718096" mt={10} mr={10} />} />
             </InputGroup>
